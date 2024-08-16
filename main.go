@@ -3,27 +3,35 @@ package main
 import "fmt"
 
 func main() {
-	name := "kamrul"
-	age := 30
+	// Arrays
+	// var ages []int = []int{30, 28, 29} // auto infer length of the array
+	// var ages [3]int = [3]int{30, 28, 29}
+	// var ages = [3]int{30, 28, 29}
+	// var ages = []int{30, 28, 29}
+	ages := []int{30, 28, 29}
+	names := [4]string{"kamrul", "Jewel", "Nizam", "Rakib"}
+	names[1] = "Mahid"
 
-	// Print Function
-	fmt.Print("Hello, ")
-	fmt.Print("World!\n")
-	fmt.Print("new line\n")
+	fmt.Println(ages, len(ages))
+	fmt.Println(names, len(names))
 
-	// Println Function
-	fmt.Println("Hello guys!")
-	fmt.Println("Goodbye guys!")
-	fmt.Println("my age is", age, "and my name is", name)
+	// Slices (use arrays under the hood)
+	var scores = []int{100, 89, 90}
+	scores[2] = 25
+	scores = append(scores, 85)
 
-	// Printf (formatted strings)
-	fmt.Printf("my age is %v and my name is %v\n", age, name)
-	fmt.Printf("my age is %q and my name is %q\n", age, name)
-	fmt.Printf("age is of type %T\n", age)
-	fmt.Printf("you scored %0.2f points\n", 225.275)
+	fmt.Println(scores, len(scores))
 
-	// Sprintf (save formatted strings)
-	var str = fmt.Sprintf("my age is %v and my name is %v\n", age, name)
-	fmt.Println("the saved string is", str)
+	// slice ranges
+	rangeOne := names[1:3]
+	rangeTwo := names[2:]
+	rangeThree := names[:3]
+
+	fmt.Println(rangeOne)
+	fmt.Println(rangeTwo)
+	fmt.Println(rangeThree)
+
+	rangeOne = append(rangeOne, "x")
+	fmt.Println(rangeOne)
 
 }
