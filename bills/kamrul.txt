@@ -1,0 +1,5 @@
+Bill Breakdown: 
+pie:                      ... $2
+salad:                    ... $3
+tip:                      ... $2.00
+total:                    ... $7.00
